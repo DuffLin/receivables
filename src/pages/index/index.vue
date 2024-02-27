@@ -3,14 +3,14 @@
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <text class="title">{{title}}</text>
-	  4564
     </view>
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-const title = ref('Hello_xixi')
+const title = ref('Hello_xixi123')
+
 </script>
 
 <style>

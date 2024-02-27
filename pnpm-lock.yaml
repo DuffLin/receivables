@@ -44,6 +44,15 @@ dependencies:
   '@dcloudio/uni-quickapp-webview':
     specifier: 3.0.0-3081220230817001
     version: 3.0.0-3081220230817001(postcss@8.4.35)(vue@3.4.19)
+  '@dcloudio/uni-ui':
+    specifier: ^1.5.2
+    version: 1.5.2
+  pinia:
+    specifier: ^2.1.7
+    version: 2.1.7(typescript@4.9.5)(vue@3.4.19)
+  pinia-plugin-persistedstate:
+    specifier: ^3.2.1
+    version: 3.2.1(pinia@2.1.7)
   vue:
     specifier: ^3.2.45
     version: 3.4.19(typescript@4.9.5)
@@ -73,6 +82,9 @@ devDependencies:
   '@uni-helper/uni-app-types':
     specifier: ^0.5.12
     version: 0.5.12(typescript@4.9.5)
+  '@uni-helper/uni-ui-types':
+    specifier: ^0.5.11
+    version: 0.5.11(@uni-helper/uni-app-types@0.5.12)(typescript@4.9.5)
   '@vue/runtime-core':
     specifier: ^3.2.45
     version: 3.4.19
@@ -1790,6 +1802,10 @@ packages:
       - vue
     dev: false
 
+  /@dcloudio/uni-ui@1.5.2:
+    resolution: {integrity: sha512-/MO31TELyHcKt3nS5bo1t8lQmLSnP9EKlHcShjqM27gL0QeYtoc9UekOITRbA9zi8rnlII3Aw91DHtny3IodFg==}
+    dev: false
+
   /@dcloudio/vite-plugin-uni@3.0.0-3081220230817001(postcss@8.4.35)(vite@4.1.4)(vue@3.4.19):
     resolution: {integrity: sha512-dLeqqyrNNUBTZfI0ppPk4YoD+DBI0gJLeTjpN6bK5i3nFKkju9g2K6IWl62YMObjTiXwQF8qAEDb+fyWoe4Ksw==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -3024,6 +3040,22 @@ packages:
       '@dcloudio/types': 3.4.7
       typescript: 4.9.5
       vue3: /vue@3.4.19(typescript@4.9.5)
+    dev: true
+
+  /@uni-helper/uni-ui-types@0.5.11(@uni-helper/uni-app-types@0.5.12)(typescript@4.9.5):
+    resolution: {integrity: sha512-tGX4llyJBdq9TmNjmZYKu4eueUWUU0F/YgZeTWDgVCmlgYGavhcUL7R+I0Uxe5hGoqFXkNf0ZnmG/WFZWfK/HQ==}
+    engines: {node: '>=14.18'}
+    peerDependencies:
+      '@uni-helper/uni-app-types': ^0.5.1
+    peerDependenciesMeta:
+      '@uni-helper/uni-app-types':
+        optional: true
+    dependencies:
+      '@dcloudio/types': 3.4.7
+      '@uni-helper/uni-app-types': 0.5.12(typescript@4.9.5)
+      vue3: /vue@3.4.19(typescript@4.9.5)
+    transitivePeerDependencies:
+      - typescript
     dev: true
 
   /@vitejs/plugin-legacy@4.1.1(terser@5.27.2)(vite@4.1.4):
@@ -5571,6 +5603,32 @@ packages:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
 
+  /pinia-plugin-persistedstate@3.2.1(pinia@2.1.7):
+    resolution: {integrity: sha512-MK++8LRUsGF7r45PjBFES82ISnPzyO6IZx3CH5vyPseFLZCk1g2kgx6l/nW8pEBKxxd4do0P6bJw+mUSZIEZUQ==}
+    peerDependencies:
+      pinia: ^2.0.0
+    dependencies:
+      pinia: 2.1.7(typescript@4.9.5)(vue@3.4.19)
+    dev: false
+
+  /pinia@2.1.7(typescript@4.9.5)(vue@3.4.19):
+    resolution: {integrity: sha512-+C2AHFtcFqjPih0zpYuvof37SFxMQ7OEG2zV9jRI12i9BOy3YQVAHwdKtyyc8pDcDyIc33WCIsZaCFWU7WWxGQ==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.3.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.6.1
+      typescript: 4.9.5
+      vue: 3.4.19(typescript@4.9.5)
+      vue-demi: 0.14.7(vue@3.4.19)
+    dev: false
+
   /pirates@4.0.6:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
@@ -6355,6 +6413,21 @@ packages:
       terser: 5.27.2
     optionalDependencies:
       fsevents: 2.3.3
+
+  /vue-demi@0.14.7(vue@3.4.19):
+    resolution: {integrity: sha512-EOG8KXDQNwkJILkx/gPcoL/7vH+hORoBaKgGe+6W7VFMvCYJfmF2dGbvgDroVnI8LU7/kTu8mbjRZGBU1z9NTA==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.4.19(typescript@4.9.5)
+    dev: false
 
   /vue-i18n@9.9.1(vue@3.4.19):
     resolution: {integrity: sha512-xyQ4VspLdNSPTKBFBPWa1tvtj+9HuockZwgFeD2OhxxXuC2CWeNvV4seu2o9+vbQOyQbhAM5Ez56oxUrrnTWdw==}
