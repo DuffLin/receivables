@@ -48,11 +48,11 @@ dependencies:
     specifier: ^1.5.2
     version: 1.5.2
   pinia:
-    specifier: ^2.1.7
-    version: 2.1.7(typescript@4.9.5)(vue@3.4.19)
+    specifier: ^2.0.35
+    version: 2.0.35(typescript@4.9.5)(vue@3.4.19)
   pinia-plugin-persistedstate:
     specifier: ^3.2.1
-    version: 3.2.1(pinia@2.1.7)
+    version: 3.2.1(pinia@2.0.35)
   vue:
     specifier: ^3.2.45
     version: 3.4.19(typescript@4.9.5)
@@ -91,12 +91,18 @@ devDependencies:
   '@vue/tsconfig':
     specifier: ^0.1.3
     version: 0.1.3
+  sass:
+    specifier: ^1.71.1
+    version: 1.71.1
+  sass-loader:
+    specifier: ^14.1.1
+    version: 14.1.1(sass@1.71.1)
   typescript:
     specifier: ^4.9.4
     version: 4.9.5
   vite:
     specifier: 4.1.4
-    version: 4.1.4(terser@5.27.2)
+    version: 4.1.4(sass@1.71.1)(terser@5.27.2)
   vue-tsc:
     specifier: ^1.0.24
     version: 1.8.27(typescript@4.9.5)
@@ -1837,7 +1843,7 @@ packages:
       magic-string: 0.30.7
       picocolors: 1.0.0
       terser: 5.27.2
-      vite: 4.1.4(terser@5.27.2)
+      vite: 4.1.4(sass@1.71.1)(terser@5.27.2)
     transitivePeerDependencies:
       - postcss
       - supports-color
@@ -3073,7 +3079,7 @@ packages:
       regenerator-runtime: 0.13.11
       systemjs: 6.14.3
       terser: 5.27.2
-      vite: 4.1.4(terser@5.27.2)
+      vite: 4.1.4(sass@1.71.1)(terser@5.27.2)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3088,7 +3094,7 @@ packages:
       '@babel/core': 7.23.9
       '@babel/plugin-transform-typescript': 7.23.6(@babel/core@7.23.9)
       '@vue/babel-plugin-jsx': 1.2.1(@babel/core@7.23.9)
-      vite: 4.1.4(terser@5.27.2)
+      vite: 4.1.4(sass@1.71.1)(terser@5.27.2)
       vue: 3.4.19(typescript@4.9.5)
     transitivePeerDependencies:
       - supports-color
@@ -3101,7 +3107,7 @@ packages:
       vite: ^4.0.0 || ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.1.4(terser@5.27.2)
+      vite: 4.1.4(sass@1.71.1)(terser@5.27.2)
       vue: 3.4.19(typescript@4.9.5)
 
   /@volar/language-core@1.11.1:
@@ -4501,6 +4507,9 @@ packages:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
     dev: false
 
+  /immutable@4.3.5:
+    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
+
   /import-local@3.1.0:
     resolution: {integrity: sha512-ASB07uLtnDs1o6EHjKpX34BKYDSqnFerfTOJL2HvMqF70LnxpjkzDB8J44oT9pu4AMPkQwf8jl6szgvNd2tRIg==}
     engines: {node: '>=8'}
@@ -5428,6 +5437,10 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
+  /neo-async@2.6.2:
+    resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
+    dev: true
+
   /node-int64@0.4.0:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==}
     dev: true
@@ -5603,20 +5616,20 @@ packages:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
 
-  /pinia-plugin-persistedstate@3.2.1(pinia@2.1.7):
+  /pinia-plugin-persistedstate@3.2.1(pinia@2.0.35):
     resolution: {integrity: sha512-MK++8LRUsGF7r45PjBFES82ISnPzyO6IZx3CH5vyPseFLZCk1g2kgx6l/nW8pEBKxxd4do0P6bJw+mUSZIEZUQ==}
     peerDependencies:
       pinia: ^2.0.0
     dependencies:
-      pinia: 2.1.7(typescript@4.9.5)(vue@3.4.19)
+      pinia: 2.0.35(typescript@4.9.5)(vue@3.4.19)
     dev: false
 
-  /pinia@2.1.7(typescript@4.9.5)(vue@3.4.19):
-    resolution: {integrity: sha512-+C2AHFtcFqjPih0zpYuvof37SFxMQ7OEG2zV9jRI12i9BOy3YQVAHwdKtyyc8pDcDyIc33WCIsZaCFWU7WWxGQ==}
+  /pinia@2.0.35(typescript@4.9.5)(vue@3.4.19):
+    resolution: {integrity: sha512-P1IKKQWhxGXiiZ3atOaNI75bYlFUbRxtJdhPLX059Z7+b9Z04rnTZdSY8Aph1LA+/4QEMAYHsTQ638Wfe+6K5g==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
       typescript: '>=4.4.4'
-      vue: ^2.6.14 || ^3.3.0
+      vue: ^2.6.14 || ^3.2.0
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
@@ -5950,6 +5963,40 @@ packages:
   /safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
+
+  /sass-loader@14.1.1(sass@1.71.1):
+    resolution: {integrity: sha512-QX8AasDg75monlybel38BZ49JP5Z+uSKfKwF2rO7S74BywaRmGQMUBw9dtkS+ekyM/QnP+NOrRYq8ABMZ9G8jw==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      '@rspack/core': 0.x || 1.x
+      node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+      sass: ^1.3.0
+      sass-embedded: '*'
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+      node-sass:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      webpack:
+        optional: true
+    dependencies:
+      neo-async: 2.6.2
+      sass: 1.71.1
+    dev: true
+
+  /sass@1.71.1:
+    resolution: {integrity: sha512-wovtnV2PxzteLlfNzbgm1tFXPLoZILYAMJtvoXXkD7/+1uP41eKkIt1ypWq5/q2uT94qHjXehEYfmjKOvjL9sg==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.5
+      source-map-js: 1.0.2
 
   /sax@1.3.0:
     resolution: {integrity: sha512-0s+oAmw9zLl1V1cS9BtZN7JAd0cW5e0QH4W3LWEK6a4LaLEA2OTpGYWDY+6XasBLtz6wkm3u1xRw95mRuJ59WA==}
@@ -6381,7 +6428,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite@4.1.4(terser@5.27.2):
+  /vite@4.1.4(sass@1.71.1)(terser@5.27.2):
     resolution: {integrity: sha512-3knk/HsbSTKEin43zHu7jTwYWv81f8kgAL99G5NWBcA1LKvtvcVAC4JjBH1arBunO9kQka+1oGbrMKOjk4ZrBg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -6410,6 +6457,7 @@ packages:
       postcss: 8.4.35
       resolve: 1.22.8
       rollup: 3.29.4
+      sass: 1.71.1
       terser: 5.27.2
     optionalDependencies:
       fsevents: 2.3.3

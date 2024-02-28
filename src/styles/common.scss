@@ -1,0 +1,33 @@
+
+
+@import './variable.scss';
+
+button{
+	margin: 0;
+	background: $base-color;
+	color: #fff;
+	font-size: 28rpx;
+	&:active, &:visited{
+		background: $base-a-active;
+		color: #fff;
+	}
+}
+//弹性盒子布局
+.f-fxSb {
+	display: flex;
+	justify-content: space-between;
+}
+.f-fxSa{
+	display: flex;
+	justify-content: space-around;
+}
+.f-fxFs {
+	display: flex;
+	justify-content: flex-start;
+}
+.f-fxFe {
+	display: flex;
+	justify-content: flex-end;
+}
+
+
