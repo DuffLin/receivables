@@ -6,7 +6,7 @@
 			// uni-ui 规则如下配置
 			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
 			// 公共组件 ，以 Ysk 开头的组件，在components 文件中查找
-			"^Ysk(.)": "@/components/Ysk$1.vue"
+			"^Ysk(.*)": "@/components/Ysk$1.vue"
 		}
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages

@@ -2,11 +2,11 @@
   import { onLaunch, onShow, onHide } from "@dcloudio/uni-app";
   onLaunch(() => {
     setTimeout( () => {
-      if (!uni.getStorageSync('token')) {
-        uni.reLaunch({
-          url: '/pages/login/login'
-        })
-      }
+      // if (!uni.getStorageSync('token')) {
+      //   uni.reLaunch({
+      //     url: '/pages/login/login'
+      //   })
+      // }
     })
   });
   onShow(() => {

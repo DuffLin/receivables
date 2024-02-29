@@ -4,3 +4,23 @@ page{
 	overflow: auto;
 	background: #f7f8fa;
 }
+/* login */
+.f-empower{
+	display: flex;
+	font-size: 24rpx;
+	color: #169bd5;   
+	justify-content: center;
+	.text{
+	  color: #333;
+	  line-height: 24rpx;
+	}
+	::v-deep uni-data-checkbox{
+	  .uni-data-checklist{
+		  .checklist-box{
+			  margin-top: 6rpx;
+			  margin-right: 0;
+		  }
+	  }
+	}
+  
+  }

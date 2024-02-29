@@ -4,28 +4,62 @@
       <image src="../../static/logo.png" mode="widthFix"/>
     </view>
     <view class="f-fxSb mq-login-btn">
-      <button size="default" class="button">手机登录</button>
-      <button class="button">授权登录</button>
+      <button class="button" hover-class="none" @tap="login('tel')">手机登录</button>
+      <button class="button" hover-class="none" @tap="login('empower')">授权登录</button>
     </view>
-    <view class="mq-footer">
-      <view class="text_box">
-        <text class="text">您已同意</text>
+  </view>
+  <view class="mq-footer">
+    <view class="f-empower">
+        <uni-data-checkbox multiple
+            selectedColor="#333" 
+            v-model="agreement" 
+            :localdata="range">
+            撒的非
+        </uni-data-checkbox>
+        <!-- <text class="text">您已同意</text> -->
         <text @click="jumpPage('/pagesMine/userServer/index')">《用户服务协议》</text> 
         <text @click="jumpPage('/pagesMine/privacyPolicy/index')">《隐私权政策》</text>
-        <text @click="jumpPage('/pagesMine/payment/index')">《支付协议》</text>
-      </view>
+        <text @click="jumpPage('/pagesMine/payment/index')">《支付协议》</text> 
     </view>
   </view>
 </template>
 
 <script setup lang="ts">
 
-import { onLoad } from '@dcloudio/uni-app'
-const jumpPage = (url:string) => {
-  uni.navigateTo({
-    url
-  })
+// import { onLoad } from '@dcloudio/uni-app'
+import { ref } from 'vue'
+
+const agreement = ref(0);
+// const range = ref([
+//       {
+// 				text: '您已同意',
+// 				value: 0
+// 			}
+// ])
+
+
+const login = (type: string) => {
+  // if (!agreement.value) {
+	// 		uni.showToast({
+	// 			title:'请勾选政策协议',
+	// 			icon: 'none',
+	// 			duration: 3000
+	// 		})
+	// 		return
+	// 	}
+  if(type === 'tel') {
+    
+  } else {
+
+  }
 }
+
+
+// const jumpPage = (url:string) => {
+//   uni.navigateTo({
+//     url
+//   })
+// }
 </script>
 
 <style scoped lang="scss">
@@ -43,13 +77,15 @@ const jumpPage = (url:string) => {
     width: 280rpx;
   }
 }
-.text_box{
-  font-size: 24rpx;
-  color: #169bd5;
-  .text{
-    color: #333;
-  }
-}
+
+// .mq-agreement-check{
+//   radio{
+//     transform:scale(0.7);
+//     top: -1rpx;
+//     position: relative;
+    
+//   }
+// }
 .mq-footer{
   position: absolute;
   bottom: 8%;
